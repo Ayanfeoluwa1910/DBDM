@@ -1,0 +1,657 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* overflow: hidden; */
+}
+body{
+  font-family: "Libre Baskerville", serif;
+}
+
+/* From Uiverse.io by SchawnnahJ */ 
+.loader {
+ position: relative;
+ width: 2.5em;
+ height: 2.5em;
+ transform: rotate(165deg);
+}
+
+.loader:before, .loader:after {
+ content: "";
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ display: block;
+ width: 0.5em;
+ height: 0.5em;
+ border-radius: 0.25em;
+ transform: translate(-50%, -50%);
+}
+
+.loader:before {
+ animation: before8 2s infinite;
+}
+
+.loader:after {
+ animation: after6 2s infinite;
+}
+
+@keyframes before8 {
+ 0% {
+  width: 0.5em;
+  box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+ }
+
+ 35% {
+  width: 2.5em;
+  box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+ }
+
+ 70% {
+  width: 0.5em;
+  box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+ }
+
+ 100% {
+  box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+ }
+}
+
+@keyframes after6 {
+ 0% {
+  height: 0.5em;
+  box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+ }
+
+ 35% {
+  height: 2.5em;
+  box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+ }
+
+ 70% {
+  height: 0.5em;
+  box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+ }
+
+ 100% {
+  box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+ }
+}
+
+.loader {
+ position: absolute;
+ top: calc(50% - 1.25em);
+ left: calc(50% - 1.25em);
+}
+/* Loader end */
+
+/* Navbar stylings */
+/* navbar 1 */
+.navbar-overall-container{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* width: 100%; */
+    /* height: 100%; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    /* background: #333; */
+    /* color: white; */
+    /* padding: 1rem 2rem; */
+}
+.navbar-list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    background-color: #F2F2F2;
+    padding: 5px 20px;
+}
+.navbar-list p{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.list-1{
+    background: none;
+    border: none;
+    font-size: 12px;
+}
+.list-1 a{
+    color: #000000;
+    text-decoration: none;
+}
+.navbar-lists{
+    display: flex;
+    gap: 20px;
+}
+.list-2{
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 15px;
+}
+.list-2 a{
+    color: #000000;
+    text-decoration: none;
+}
+.list-2 a:hover{
+    color: #000000;
+    font-weight: 550;
+}
+
+/* navbar 2 */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #dedede;
+    padding: 5px 20px;
+}
+.logo{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+}
+.logo img{
+    height: 50px;
+    width: 50px;
+}
+.list-3{
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+.list-3 a{
+    color: #000000;
+    text-decoration: none;
+    margin: 0;
+}
+.logo-list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 25% 0 0;
+    gap: 13px;
+    position: relative;
+}
+/* .list-4{
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+.list-4 a{
+    color: #000000;
+    text-decoration: none;
+    margin: 0;
+    color: goldenrod;
+}
+
+/.list-4 a:hover{
+    color: #daa520;
+    font-weight: 600;
+}
+.list-4{
+    position: relative;
+    list-style: none;
+    padding: 50px 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.list-4:hover {
+    transform: translateY(-3px);
+    color: #daa520;
+}
+.list-4::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 3px;
+    /* background-color: #000000; */
+    /* background-color: #2752ff;
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-50%);
+}
+.list-4:hover::before {
+    width: 100%;
+}
+.list-4 a{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.4s;
+    padding: 5px 0;
+}
+.list-4 a:hover {
+    color: #2752ff;
+} */
+
+/* Dropdown styling */
+
+/* .dropbtn {
+  background-color: none;
+  color: rgb(0, 0, 0);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  text-decoration: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  /* background-color: none;
+  border: none;
+  text-decoration: none; */
+
+/* .dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1; */
+  /* background-color: #f1f1f1; */
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+ */
+
+/* .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: none;
+} */
+
+
+/* ========== Navbar container ========== */
+.logo-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 25px 10%; */
+  background: white;
+  position: relative;
+  gap: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* ========== Nav links ========== */
+.list-4 {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  /* padding: 0 10px; */
+}
+
+.list-4::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0025b9;
+  transition: width 0.3s ease;
+}
+
+.list-4:hover::before {
+  width: 100%;
+}
+
+.list-4:hover {
+  color: #0025b9;
+}
+
+/* ========== Dropdown styling ========== */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #dedede;
+  border: none;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  min-width: 180px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.1);
+  z-index: 99;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content a {
+  padding: 8px 10px;
+  color: #000000;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.3s;
+  font-size: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+  color: #0025b9;
+}
+
+/* Hover logic */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Video session */
+.video-section {
+  position: relative;
+  height: 100vh;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: brightness(60%); /* Optional dark overlay */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* map container */
+.button-container{
+ display: flex;
+ justify-content: center;
+ gap: 45px;
+ border: none;
+}
+/* .dropdown-content{ */
+  /* display: block;
+  justify-content: center; */
+/* } */
+.dropdown-container{
+  /* display: none; */
+  width: 100%;
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+.map-over-cont{
+  box-shadow: 0px opx 5px #999;
+  /* margin-bottom: 30px; */
+  /* background-color: #000000; */
+
+}
+.map-cont{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  gap: 45px;
+  /* background-color: #000000; */
+}
+.main-button{
+  border: none;
+  background: none;
+  color: rgb(132, 132, 132);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* .main-button:hover{ */
+  /* color: #000 */
+/* } */
+
+.card-text-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-header {
+  flex-direction: column;
+}
+
+.card-header h3{
+  margin-top: 60px;
+  color: #727272;
+  font-size: 30px;
+}
+
+.card-header p {
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.main-button{
+  color: #000 !important;
+}
+
+.map-over-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  text-align: center;
+}
+
+.img-dropdown img {
+  width: 50%;
+  height: 100%;
+}
+
+.dropdown-button button {
+  padding: 8px 35px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid #727272;
+  color: #727272 ;
+  margin: 8px;
+}
+
+/* Music Styling */
+
+.music-section-container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 80px;
+  background: #72727233;
+  padding: 80px;
+}
+
+.music-section-container h1 {
+  font-size: 35px;
+  color: #727272;
+  font-weight: 700;
+  /* margin-top: 80px; */
+}
+
+.music-text p {
+  font-size: 28px;
+  color: #000000;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+/* Hillsong Online */
+.card-container {
+  /* background: #72727233; */
+  background-color: #dedede;
+}
+
+.card-title-container {
+  padding: 70px 0 40px 0;
+  font-size: 30px;
+}
+.card-text {
+  font-size: 13px;
+}
+
+.card-body a {
+  padding: 10px 25px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid #727272;
+  color: #727272 ;
+  margin: 8px 8px 50px 8px;
+  font-size: 11px;
+}
+
+.unity-title-container {
+  padding: 70px 0 40px 0;
+  font-size: 30px;
+  color: #727272;
+  margin: 0;
+}
+.card-text-container {
+  margin-bottom: 70px;
+  font-size: 13px;
+}
+
+/* Fixed background content */
+ /* Section with fixed background */
+    .bg-section {
+      min-height: 50vh;                /* full screen height */
+      background-attachment: fixed;     /* makes it static while scrolling */
+      background-size: cover;           /* covers entire screen */
+      background-position: center;      /* centers the image */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+      font-size: 2rem;
+    }
+
+    .bg-section h1 {
+      padding: 70px 0 20px 0;
+      font-size: 30px;
+    }
+   
+    .bg-section h3 {
+      padding: 0 0 10px 0;
+      font-size: 18px;
+    }
+    
+    .bg-section p {
+      padding: 10px 0 0 0;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .card-btn-body {
+      margin: 0 0 30px 0;
+    }
+
+    .card-btn-body a {
+      border-radius: 20px;
+      background-color: transparent;
+      border: 2px solid #ffffff;
+      color: #ffffff ;
+      font-size: 13px;
+      padding: 8px 20px;
+      margin: 0;
+    }
+
+    /* First background */
+    .bg1 {
+      background-image: url('./first\ fixed\ background');
+    }
+
+    /* Second background */
+    .bg2 {
+      background-image: url('./fixed\ background');
+    }
+
+    /* Content sections */
+    .content {
+      padding: 60px 20px;
+      background: #f8f8f8;
+      text-align: center;
+    }
