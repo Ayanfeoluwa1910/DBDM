@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "musicTitle": "Worship",
+        "musicContent": "Songs that exalt and glorify the Name of Jesus, build the Church, and fuel revival on the earth.",
+        "link": "https://www.hillsong.com/worship"
+    },
+
+    {
+     "id": 2,
+        "musicTitle": "HillSong Chapel",
+        "musicContent": "Simple arrangements of God-glorifying songs for moments of intimate worship.",
+        "link": "https://www.hillsong.com/hillsongchapel"   
+    },
+
+    {
+        "id": 3,
+        "musicTitle": "HillSong Instrumentals",
+        "musicContent": "Beautifully recorded and arranged songs for personal times of prayer and reflection.",
+        "link": "https://www.hillsong.com/hillsong-instrumentals"   
+    },
+
+    {
+     "id": 4,
+        "musicTitle": "HillSong kids",
+        "musicContent": "Engaging children of this generation in worship.",
+        "link": "https://www.hillsong.com/hillsongkids"     
+    }
+
+]
